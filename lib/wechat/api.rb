@@ -121,6 +121,14 @@ module Wechat
       post 'message/custom/send', message.to_json, content_type: :json
     end
 
+    def message_mass_sendall(message)
+      post 'message/mass/sendall', message.to_json, content_type: :json
+    end
+
+    def media_uploadnews(articles)
+      post 'media/uploadnews', articles.to_json, content_type: :json
+    end
+
     def template_message_send(message)
       post 'message/template/send', message.to_json, content_type: :json
     end
